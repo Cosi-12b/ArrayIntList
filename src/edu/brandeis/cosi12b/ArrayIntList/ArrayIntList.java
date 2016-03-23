@@ -40,7 +40,7 @@ public class ArrayIntList {
   }
 
   public void set(int index, int value) {
-    checkAndExpand(index);
+    expandIfNecessary(index);
     for (int i=size; i>index; i--) {
       list[i] = list[i-1];
     }
@@ -49,7 +49,7 @@ public class ArrayIntList {
       size = index+1;
   }
 
-  private void checkAndExpand(int index) {
+  private void expandIfNecessary(int index) {
     if (index < capacity) return;
     int newCapacity = capacity*2 + index;
     int[] oldArray = list;
