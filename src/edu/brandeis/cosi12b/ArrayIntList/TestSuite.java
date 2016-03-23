@@ -1,3 +1,4 @@
+package edu.brandeis.cosi12b.ArrayIntList;
 
 public class TestSuite {
 
@@ -57,9 +58,9 @@ public class TestSuite {
     list1.add(9);
     list1.add(7);
     list1.remove(2);
-    if (list1.length() != 3 ||
-        list1.get(2) != 7)
+    if ((list1.length() != 3) || (list1.get(2) != 7)) {
       return error("test5: remove in the middle failed");
+    }
     return success("test5");
     
   }
@@ -104,8 +105,13 @@ public class TestSuite {
   public boolean test9() {
     ArrayIntList list1 = new ArrayIntList(20);
     list1.set(30, 100);
-    if (list1.get(30) != 100)
-      return error("test9: expansion of underlying array didn't work");
+    try {
+      int value = list1.get(30);
+      if (value != 100) 
+        return error("test9: expansion of underlying array didn't work");
+      } catch (Exception e) {
+        return error("test9: expansion caused an exception");
+    }
     return success("test9");
   }
 

@@ -1,3 +1,4 @@
+package edu.brandeis.cosi12b.ArrayIntList;
 
 public class ArrayIntList {
   private int[] list;

@@ -1,3 +1,4 @@
+package edu.brandeis.cosi12b.ArrayIntList;
 
 public class ArrayIntListExample {
 
@@ -10,9 +11,9 @@ public class ArrayIntListExample {
     t.test4();
     t.test5();
     t.test6();
-    t.test7();
-    t.test8();
-    t.test9();
+//    t.test7();
+//    t.test8();
+//    t.test9();
   }
 
 }
