@@ -1,4 +1,4 @@
-package edu.brandeis.cosi12b.ArrayIntList;
+package edu.brandeis.cosi12b.arrayintlist;
 
 public class TestSuite {
 
